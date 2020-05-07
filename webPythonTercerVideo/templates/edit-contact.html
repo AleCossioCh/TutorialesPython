@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body  %}
+<div class="card card bg-light mb-3">
+    <form action="/update/{{contact.0}}"  class="form-group" method="POST">
+        <input type="text" class="form-control-plaintext" name="fullname" placeholder="Fullname" value="{{contact.1}}"> 
+        <input type="text" class="form-control-plaintext" name="phone" placeholder="Phone" value="{{contact.2}}">
+        <input type="text" class="form-control-plaintext" name="email" placeholder="Email" value="{{contact.3}}">
+        <button type="submit" class="btn btn-primary disabled">
+            Save
+        </button>
+    
+    </form>
+</div>
+
+{% endblock %}
